@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+     <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Países</title>
+     </head>
+     <body style="background-color: purple; color: white;">
+          <h1>API de países</h1>
+
+          <label for="nome">Nome do país:</label> <br>
+          <input type="text" name="pais" id="pais" placeholder="Digite o nome do país" width="200px"> <br>
+
+          <button type="button" onclick="receber_pais()">Enviar</button> <br>
+
+          <h2>Resultados:</h2>
+          <p id="nome"></p>
+          <p id="capital"></p>
+          <p id="linguas"></p>
+          <p id="moeda"></p>
+          <p id="regiao"></p>
+          <p id="subRegiao"></p>
+          <p id="bandeira"></p> 
+
+          <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+          <script src="./Paises.js"></script>
+     </body>
+</html>
