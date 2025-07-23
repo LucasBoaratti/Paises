@@ -4,25 +4,38 @@
           <meta charset="UTF-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <title>Países</title>
+          <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
      </head>
-     <body style="background-color: purple; color: white;">
-          <h1>API de países</h1>
+     <style>
+          * {
+               font-family: "Montserrat", sans-serif;
+          }
+     </style>
+     <body class="flex flex-col justify-center items-center min-h-screen bg-[#8eecf5]">
+          <section class="bg-[#386641] p-7 rounded-[25px] text-white w-[500px] my-[30px]">
+               <h1 class="text-center text-[25px] mb-[20px]">🌎Países do mundo🌎</h1>
 
-          <label for="nome">Nome do país:</label> <br>
-          <input type="text" name="pais" id="pais" placeholder="Digite o nome do país" width="200px"> <br>
+               <label for="nome" class="text-[20px]">Nome do país:</label> <br>
+               <input type="text" name="pais" id="pais" placeholder="Digite o nome do país" class="w-full h-[35px] bg-white text-black text-[18px] p-[4px] my-[5px] rounded-[10px]"> <br>
 
-          <button type="button" onclick="receber_pais()">Enviar</button> <br>
+               <div class="text-center my-[15px]">
+                    <button type="button" onclick="receber_pais()" class="bg-[#FFF222] text-black text-[18px] p-1.5 rounded-[10px] w-[80px] cursor-pointer hover:bg-[#ffffff]">Enviar</button> <br>
+               </div>
 
-          <h2>Resultados:</h2>
-          <p id="nome"></p>
-          <p id="capital"></p>
-          <p id="linguas"></p>
-          <p id="moeda"></p>
-          <p id="regiao"></p>
-          <p id="subRegiao"></p>
-          <p id="bandeira"></p> 
+               <p id="nome" class="text-[25px] text-center"></p>
+               <p id="nomeOriginal" class="text-[20px] text-center"></p>
+               <p id="capital" class="mt-[5px] text-[18px]"></p>
+               <p id="linguas" class="mt-[5px] text-[18px]"></p>
+               <p id="moeda" class="mt-[5px] text-[18px]"></p>
+               <p id="regiao" class="mt-[5px] text-[18px]"></p>
+               <p id="subRegiao" class="mt-[5px] text-[18px]"></p>
+               <p id="bandeira" class="flex justify-center items-center"></p> 
 
-          <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-          <script src="./Paises.js"></script>
+               <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+               <script src="./Paises.js"></script>
+          </section>
      </body>
 </html>
