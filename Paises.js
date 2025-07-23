@@ -89,7 +89,8 @@ function receber_pais() {
           const nomeTraduzido = dicionarioPaises[nomeOficial] || "Nome nativo não disponível."; 
           const nomeNativo = pais.name.nativeName && pais.name.nativeName[Object.keys(pais.name.nativeName)[0]].common;
 
-          document.getElementById("nome").textContent = `Nome em português: ${nomeTraduzido}. Nome original do país: ${nomeNativo || "Tradução não disponível."}`;
+          document.getElementById("nome").textContent = `Nome em português: ${nomeTraduzido}`
+          document.getElementById("nomeOriginal").textContent = `Nome original do país: ${nomeNativo || "Tradução não disponível."}`;
 
           const nomePais = pais.name.common;
           const capitalTraduzida = dicionarioCapitais[nomePais] || pais.capital[0] || "Capital não encontrada.";
@@ -125,10 +126,7 @@ function receber_pais() {
           const bandeira = pais.flags.png;
           const altBandeira = pais.flags.alt;
 
-          document.getElementById("bandeira").innerHTML = `
-               <p>Imagem da bandeira:</p>
-               <img src="${bandeira}" alt="${altBandeira}">
-          `;
+          document.getElementById("bandeira").innerHTML = `<img src="${bandeira}" alt="${altBandeira}" style="background-color: #b6bcc6; padding: 15px; margin-top: 20px; border: 3px solid #00b4d8">`;
      }).catch((error) => {
           console.error("Erro ao obter país: ", error);
      });
